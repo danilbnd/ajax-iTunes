@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Start</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png" />
+	
+
+	<!-- Compiled and minified CSS -->
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<div class="ba-header parallax-container center-align white-text">
+		<div class="container">
+
+			<img src="favicon.png" alt="iTunes">
+			<h1>iTunes search</h1>
+			<h4>Your music, movies, and TV shows take center stage.</h4>
+			<div class="parallax"><img src="img/psp-hero-itunes.image.large_2x.jpg"></div>
+
+		</div>
+		<!-- /.ba-container -->
+	</div>
+
+
+	<main class="ba-container">
+		<form action="#" method="post" class="card-panel ba-search-form" data-search-form>
+			<div class="input-field">
+				<input value="50 cent" id="query" type="text" class="validate" required>
+				<label for="query">Enter song or artist</label>
+			</div>
+
+
+			<button type="submit" class="btn-floating btn-large waves-effect waves-light red">
+				<i class="material-icons">search</i>
+			</button>
+		</form>
+		<div class="divider"></div>
+		<!-- /.divider -->
+		<div class="ba-tunws-wrap">
+			<div class="row" data-list>
+				<script type="text/template" data-tune-tmpl>
+
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image">
+						  <img src="{{cover}}" alt="{{song}}">
+						  <h3 class="card-title">{{artist}}</h3>
+						  <button data-play="{{trackId}}" class="btn-large btn-floating halfway-fab waves-effect waves-light red">
+							  <i class="material-icons">play_arrow</i>
+							</button>
+							<audio id="{{trackId}}"  src="{{audio}}"></audio>
+						</div>
+						<div class="card-content">
+							<h4 class="card-title">{{song}}</h4>
+						  <p>
+							  Album - {{album}}
+								<span class="badge new" data-badge-caption="">
+									<i class="material-icons tiny">access_time</i>
+									{{duration}}
+								</span>
+						  </p>
+						  <p class="grey-text text-lighten-1">
+							  Genre - {{genre}}
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="{{a}}">
+								<i class="material-icons tiny">shopping_cart</i>
+								Buy collection - {{price}}
+							</a>
+							
+						 </div>
+					 </div>
+				</div>
+				</script>
+				
+			</div>
+			<!-- /.ba-tunes-list -->
+		</div>
+		<!-- /.ba-tunws-wrap -->
+	</main>
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
